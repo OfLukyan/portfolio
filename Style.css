@@ -1,16 +1,52 @@
+  
+.stars-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+  
+#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+  }  
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
+    overflow-y: hidden;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right bottom, rgb(112, 74, 72), rgb(46, 42, 42));
+    background: linear-gradient(135deg, #0e0a1f, #1b0c2d, #1c1b2f, #29273a, #1a0e2a);
+    background-size: 400% 400%;
+    animation: darkProfessionalFlow 25s ease infinite;
 }
+@keyframes darkProfessionalFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
 main {
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    left: 50%;
+    bottom: 60px;
     width: 1800px;
     flex-direction: row;
     display: flex;
@@ -31,12 +67,7 @@ main {
     border-radius: 50%;
     box-shadow: rgb(16, 17, 19) 0px 20px 30px -10px;
     object-fit: cover;
-}
-
-.perfil h2 {
-    font-size: 110px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-shadow: 2px 2px 5px rgb(255, 255, 255), -2px -2px 5px rgb(255, 255, 255), 2px -2px 5px rgb(255, 255, 255), -2px 2px 5px rgb(255, 255, 255);
+    
 }
 .descript {
     width: 1150px;
@@ -44,7 +75,7 @@ main {
     margin-left: 30px;
 }
 .descript p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     margin-top: 30px;
     font-size: 30px;
     opacity: 80%;
@@ -52,6 +83,51 @@ main {
 
 h1 {
     font-size: 80px;
-    margin-top: 90px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #3c3a66;
+    margin-top: 140px;
+    font-family: 'Nunito', sans-serif;
 }
+header {
+    margin-top: 50px;
+    height: 75px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divnav {
+    font-size: 40px;
+    color: rgba(240, 255, 255, 0.616);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 1725px;
+    border: solid rgba(245, 245, 245, 0.336) 3.5px;
+    border-radius: 13px;
+    height: 95px;
+    backdrop-filter: blur(40px);
+}
+nav {
+    width: 1725;    
+    height: 95px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+nav .logo{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    margin-left: 18px;
+    margin-right: 500px;
+}
+.aboutme {
+    font-size: 25px;
+}
+h3 {
+    font-family: 'Orbitron', sans-serif; 
+   margin-top: 0px;
+    font-size: 55px;
+}
+.LukyanIs
